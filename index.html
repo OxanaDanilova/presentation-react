@@ -1,0 +1,262 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/moon.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+				<section>REACT
+          <img src="./images/react-900x450.jpg" alt="react-pic">
+					<aside class="notes">
+            Hi, everyone. I am Oxana and I am going to say about React.
+          </aside>
+				</section>
+				</section>
+        <section>
+        <section>
+						<h3>What is React?</h3>
+					<aside class="notes">
+              React is a JavaScript library created by Facebook.
+              React is a tool for building reusable UI components.
+						</aside>
+
+        </section>
+        <section>
+						<h3>How does React Work?</h3>
+		    </section>
+        <section>
+            <h3>React creates a VIRTUAL DOM in memory.</h3>
+            <img src="./images/virtual_dom1.png" alt="virtual_dom">
+					<aside class="notes">
+              Instead of manipulating the browser's DOM directly,
+              React creates a virtual DOM in memory, where it does
+              all the necessary manipulating, before making the changes in the browser DOM.
+          </aside>
+
+          </section>
+          <section>
+              <h3>React creates a VIRTUAL DOM in memory.</h3>
+              <img src="./images/virtual_dom2.jpg" alt="virtual_dom">
+            <aside class="notes">
+                This process improves the performance exponentially and in React
+                terminology this entire process is known as Reconciliatory Algorithm.
+              </aside>
+
+            </section>
+            <section>
+                <h3>The Virtual DOM works in three simple steps.</h3>
+                <img src="./images/vdom_step1.png" alt="virtual_dom">
+              <aside class="notes">
+                  Whenever any underlying data changes, the entire UI is re-rendered in Virtual DOM representation.
+                </aside>
+
+              </section>
+              <section>
+                  <h3>Compare the differences</h3>
+                  <img src="./images/vdom_step2.png" alt="virtual_dom">
+                <aside class="notes">
+                    Then the difference between the previous DOM representation and the new one is calculated.
+                  </aside>
+
+                </section>
+                <section>
+                    <h3>Update the Real DOM</h3>
+                    <img src="./images/vdom_step3.png" alt="virtual_dom">
+                  <aside class="notes">
+                      Once the calculations are done, the real DOM will be updated with only the things that have actually changed.
+                    </aside>
+
+                  </section>
+
+        </section>
+        <section>
+        <section>
+            <h3>React Render HTML</h3>
+            <aside class="notes">
+              React's goal is in many ways to render HTML in a web page.
+              React renders HTML to the web page by using a function called ReactDOM.render().
+            </aside>
+
+          </section>
+          <section>
+              <h3>ReactDOM.render()</h3>
+              <img src="./images/render1.png" alt="render_expl">
+              <img src="./images/render2.png" alt="render_expl">
+              <aside class="notes">
+                  The ReactDOM.render() function takes two arguments, HTML code and an HTML element.
+                  The purpose of the function is to display the specified HTML code inside the specified HTML element.
+                  Display a paragraph inside the "root" element:
+                  The result is displayed in the <div id="root"> element:
+              </aside>
+             </section>
+        </section>
+        <section>
+        <section>
+            <h3>React JSX</h3>
+            <p>JSX allows us to write HTML in React.</p>
+            <img src="./images/jsx1.png" alt="render_expl">
+            <aside class="notes">
+                JSX is a Markup language used in order to create React elements.
+            </aside>
+           </section>
+           <section>
+              <p>A typical component in React would look like:</p>
+              <img src="./images/typical_jsx.png" alt="render_expl">
+              <aside class="notes">
+                  Actually JSX, a markup language similar to HTML but actually an extension to JavaScript
+              </aside>
+             </section>
+             <section>
+                <p>JSX as variables</p>
+                <img src="./images/jsx_var.png" alt="render_expl">
+                <aside class="notes">
+                    JSX elements can act as values for identifiers. The following example shows how to declare a variable with a JSX element as the value.
+                </aside>
+               </section>
+               <section>
+                  <p>Expressions in JSX</p>
+                  <img src="./images/jsx_expressions.png" alt="render_expl">
+                  <aside class="notes">
+                      JSX supports all JavaScript Expressions by wrapping them inside a pair of curly brackets.
+                  </aside>
+                 </section>
+                 <section>
+                    <p>Attributes in JSX</p>
+                    <img src="./images/jsx_attribites.png" alt="render_expl">
+                    <aside class="notes">
+                        JSX supports attributes the same way as HTML does except for the fact that attributes are written in camelCasing
+                    </aside>
+                   </section>
+                  </section>
+                  <section>
+                      <section>
+                      <h3>Components in React</h3>
+                      <p>Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.</p>
+                      <img src="./images/components1.jpeg" alt="render_expl">
+                      <aside class="notes">
+                          Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.
+                      </aside>
+                     </section>
+                     <section>
+                        <h3>React provides us with two ways to create components:</h3>
+                        <p>ES6 Class</p>
+                        <p>Functions</p>
+                        <aside class="notes">
+                            Both the techniques are responsible for returning a React element.
+                        </aside>
+                       </section>
+                       <section>
+                        <h3>Create a Class Component</h3>
+                        <img src="./images/cl_component.png" alt="class_component">
+
+                        <aside class="notes">
+                          The component has to include the extends React.Component statement.
+                          The component also requires a render() method.
+                        </aside>
+                       </section>
+                       <section>
+                        <h3>Create a Function Component</h3>
+                        <img src="./images/func_comp.png" alt="class_component">
+
+                        <aside class="notes">
+                            This function is a valid React component because it accepts a single “props” (which stands for properties) object argument with data and returns a React element.
+                        </aside>
+                       </section>
+                      </section>
+                      <section>
+                          <section>
+                        <h3>React Props</h3>
+                        <img src="./images/props1.png" alt="props">
+                        <img src="./images/props2.png" alt="props">
+
+                        <aside class="notes">
+                            Props are arguments passed into React components.
+                            Props are passed to components via HTML attributes.
+                        </aside>
+                       </section>
+                       <section>
+                          <h3>React State</h3>
+                          <img src="./images/state_obj.png" alt="state">
+
+                          <aside class="notes">
+                              React components has a built-in state object.
+                              The state object is where you store property values that belongs to the component.
+                              When the state object changes, the component re-renders.
+                              We can specifiy the state object in the constructor method.
+                          </aside>
+                         </section>
+                        </section>
+                         <section>
+                          <section>
+                          <h3>Angular vs React vs Vue</h3>
+                          <img src="./images/react_angular_vue.png" alt="angular_react_vue">
+
+                          <aside class="notes">
+                              Also I want say a few words about React in comparison with other JavaScript libraries and frameworks
+                          </aside>
+                         </section>
+                         <section>
+                            <p>React is more popular according to stack overflow statistics and google trends.</p>
+                            <img src="./images/statistics.png" alt="statistics">
+
+                            <aside class="notes">
+                                React is more popular according to stack overflow statistics and google trends.
+                            </aside>
+                           </section>
+                           <section>
+                             <img src="./images/comparison.png" alt="comparison1">
+                              <aside class="notes">
+                                  Vue and React offer better performance and flexibility than Angular.
+                                  Vue and react are more suited for light-weight applications and angular is the best for large UI applications.
+                                  </aside>
+                             </section>
+                             <section>
+                                <p>Thank you for your attention!</p>
+
+                                <aside class="notes">
+                                    That is actually all what I want to say about React. Thank you for your attention.
+                                </aside>
+                               </section>
+                						</section>
+
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
